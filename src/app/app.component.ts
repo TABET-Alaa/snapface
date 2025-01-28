@@ -9,6 +9,7 @@ import { FaceSnap } from './models/face-snap';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
+  faceSnaps!: FaceSnap[]
    mySnap! : FaceSnap
 
   ngOnInit(): void {
@@ -19,5 +20,7 @@ export class AppComponent implements OnInit {
         new Date(),
         10,  
       )
+
+      this.mySnap.setLocation("a la montagne")
   }
 }
